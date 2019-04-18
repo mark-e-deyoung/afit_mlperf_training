@@ -50,6 +50,6 @@ do
 		/bin/bash  /benchmark/tensorflow/run_and_time.sh &> "$(hostname).${RUN_START}.${i}.singularity.log"
 done
 
-grep -Hn $(hostname).*.native.log > "$(hostname).${RUN_START}.native.results.log"
-grep -Hn $(hostname).*.singularity.log > "$(hostname).${RUN_START}.singularity.results.log"
+grep -Hn RESULT $(hostname).*.native.log > "$(hostname).${RUN_START}.native.results.log"
+grep -Hn RESULT $(hostname).*.singularity.log > "$(hostname).${RUN_START}.singularity.results.log"
 
