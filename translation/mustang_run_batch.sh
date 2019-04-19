@@ -8,6 +8,11 @@ cd ${HOME}/git/afit_mlperf_training/translation
 
 source ${MODULESHOME}/init/bash
 
+echo "loading CUDA 9.0 for Tensorflow 1.9.0"
+module unload cuda
+module load devel/cuda/9.0
+module load cudnn/cuda9.0/7.4.2
+
 # conda init bash
 source ${HOME}/.bashrc
 
